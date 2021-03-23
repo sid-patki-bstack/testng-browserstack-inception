@@ -7,11 +7,9 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-import org.testng.reporters.EmailableReporter;
 import org.openqa.selenium.JavascriptExecutor;
 
 
-import static org.openqa.selenium.support.ui.ExpectedConditions.presenceOfElementLocated;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 
 
