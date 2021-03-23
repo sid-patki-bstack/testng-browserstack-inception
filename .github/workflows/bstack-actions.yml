@@ -30,7 +30,7 @@ jobs:
       - name: 'Cleaning project'
         run: mvn clean
 
-      - name: 'Installing dependency and Running test on BrowserStack'
+      - name: 'Installing dependencies and Running test on BrowserStack'
         run: mvn install -P single
 
       - name: 'BrowserStackLocal Stop'
