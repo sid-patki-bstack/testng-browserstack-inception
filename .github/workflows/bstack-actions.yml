@@ -18,7 +18,7 @@ jobs:
         with:
           local-testing: start
           local-identifier: random
-      
+
       - name: 'Checkout the repository'
         uses: actions/checkout@v2
 
@@ -26,11 +26,11 @@ jobs:
         uses: actions/setup-java@v1
         with:
           java-version: 1.8
-      
-      - name: 'Installing Dependencies and Running test on BrowserStack'
+
+      - name: 'Running test on BrowserStack'
         run: mvn install -P single
 
-      - name: 'BrowserStackLocal Stop'  # Terminating the BrowserStackLocal tunnel connection
+      - name: 'BrowserStackLocal Stop'
         uses: browserstack/github-actions/setup-local@master
         with:
           local-testing: stop
