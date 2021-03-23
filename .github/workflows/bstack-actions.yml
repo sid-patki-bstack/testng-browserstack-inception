@@ -27,10 +27,10 @@ jobs:
         with:
           java-version: 1.8
 
-      - name: 'Running test on BrowserStack'
+      - name: 'Cleaning project'
         run: mvn clean
 
-      - name: 'Running test on BrowserStack'
+      - name: 'Installing dependency and Running test on BrowserStack'
         run: mvn install -P single
 
       - name: 'BrowserStackLocal Stop'
