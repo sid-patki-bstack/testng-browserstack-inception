@@ -27,11 +27,8 @@ jobs:
         with:
           java-version: 1.8
       
-      - name: 'Installing Dependencies'
-        run: mvn install
-
-      - name: 'Running test on BrowserStack'
-        run: mvn test -P single
+      - name: 'Installing Dependencies and Running test on BrowserStack'
+        run: mvn install -P single
 
       - name: 'BrowserStackLocal Stop'  # Terminating the BrowserStackLocal tunnel connection
         uses: browserstack/github-actions/setup-local@master
