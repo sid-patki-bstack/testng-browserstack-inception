@@ -7,9 +7,6 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;
-import org.testng.reporters.EmailableReporter;
-
-import static org.openqa.selenium.support.ui.ExpectedConditions.presenceOfElementLocated;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 
 public class SingleTest extends BrowserStackTestNGTest {
