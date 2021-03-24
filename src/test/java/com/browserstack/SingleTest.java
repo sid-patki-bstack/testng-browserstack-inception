@@ -26,7 +26,7 @@ public class SingleTest extends BrowserStackTestNGTest {
 
         String email = System.getenv("BROWSERSTACK_DEMO_USERNAME");
         String password = System.getenv("BROWSERSTACK_DEMO_PASSWORD");
-        System.out.println("======>>>>>   email"+ email + " password"+ password);
+        System.out.println("======>>>>>   email"+ (String)email + " password"+ (String)password);
 
 
         driver.findElement(By.id("user_email_login")).sendKeys(email);
