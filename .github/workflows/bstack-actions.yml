@@ -32,7 +32,7 @@ jobs:
 
       - name: 'Installing dependencies and Running test on BrowserStack'
         run: mvn install -P single
-        with:
+        env:
           email:  ${{ secrets.BROWSERSTACK_DEMO_USERNAME }}
           password: ${{ secrets.BROWSERSTACK_DEMO_PASSWORD }}
 
