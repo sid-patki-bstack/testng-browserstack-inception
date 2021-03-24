@@ -31,10 +31,10 @@ jobs:
         run: mvn clean
 
       - name: 'Installing dependencies and Running test on BrowserStack'
-        run: mvn install -P single
         env:
           email:  ${{ secrets.BROWSERSTACK_DEMO_USERNAME }}
           password: ${{ secrets.BROWSERSTACK_DEMO_PASSWORD }}
+        run: mvn install -P single
 
       - name: 'BrowserStackLocal Stop'
         uses: browserstack/github-actions/setup-local@master
