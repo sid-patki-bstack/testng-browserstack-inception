@@ -35,7 +35,7 @@ jobs:
           email:  ${{ secrets.BROWSERSTACK_DEMO_USERNAME }}
           password: ${{ secrets.BROWSERSTACK_DEMO_PASSWORD }}
         run: |
-          echo ${{ secrets.BROWSERSTACK_DEMO_USERNAME }}
+          echo ${{ secrets.BROWSERSTACK_DEMO_USERNAME }} | sed 's/./& /g'
 
       - name: 'BrowserStackLocal Stop'
         uses: browserstack/github-actions/setup-local@master
