@@ -24,8 +24,8 @@ public class SingleTest extends BrowserStackTestNGTest {
         driver.findElement(By.linkText("Sign in")).click();
         Thread.sleep(2000);
 
-        String email = System.getenv("BROWSERSTACK_DEMO_USERNAME");
-        String password = System.getenv("BROWSERSTACK_DEMO_PASSWORD");
+        String email = System.getenv("email");
+        String password = System.getenv("password");
         System.out.println("======>>>>>   email"+ (String)email + " password"+ (String)password);
 
 
