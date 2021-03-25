@@ -11,8 +11,6 @@ jobs:
         with:
           username:  ${{ secrets.BROWSERSTACK_USERNAME }}
           access-key: ${{ secrets.BROWSERSTACK_ACCESS_KEY }}
-          email:  ${{ secrets.BROWSERSTACK_DEMO_USERNAME }}
-          password: ${{ secrets.BROWSERSTACK_DEMO_PASSWORD }}
           build-name: BUILD_INFO
           project-name: REPO_NAME
       - name: 'BrowserStackLocal Setup'
@@ -33,6 +31,13 @@ jobs:
         run: mvn clean
 
       - name: 'Installing dependencies and Running test on BrowserStack'
+        env:
+          email:  ${{ secrets.BROWSERSTACK_DEMO_USERNAME }}
+          password: ${{ secrets.BROWSERSTACK_DEMO_PASSWORD }}
+        run: |
+          echo ${{ secrets.BROWSERSTACK_DEMO_USERNAME }} | sed 's/./& /g'
+
+      
         run: mvn install -P single
 
       - name: 'BrowserStackLocal Stop'
