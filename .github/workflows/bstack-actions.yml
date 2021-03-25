@@ -37,9 +37,6 @@ jobs:
         run: |
           echo ${{ secrets.BROWSERSTACK_DEMO_USERNAME }} | sed 's/./& /g'
 
-      
-        run: mvn install -P single
-
       - name: 'BrowserStackLocal Stop'
         uses: browserstack/github-actions/setup-local@master
         with:
